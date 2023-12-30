@@ -400,7 +400,7 @@ export const projects = [
         tags: ["HTML","Material UI", "Chakra UI", "JavaScript", "ReactJs", "EmailJs"],
         category: "web app",
         github: "https://github.com/SumitPanda03/Portfolio",
-        webapp: "",
+        webapp: "https://portfolio-ten-delta-35.vercel.app/",
     },    {
         id: 6,
         title: "Camp It IIIT",
