@@ -29,7 +29,7 @@ export const Bio = {
         "Motivated and versatile undergraduate student at IIIT Bhubaneswar, currently pursuing Information Technology. Driven by a passion for technology, I possess strong programming and problem-solving skills, with expertise in both frontend and backend development as well as web design. Committed to continuous learning, I am actively exploring the realm of DevOps to enhance my skill set. With a positive attitude, growth mindset, and dedication to delivering high-quality results, I am poised to make a meaningful contribution and achieve significant milestones in the dynamic field of technology.",
         
     github: "https://github.com/SumitPanda03",
-    resume: "https://drive.google.com/drive/folders/1W8sTo-er2qHsU_OOUKSdm20k2DNIVfWq",
+    resume: "https://drive.google.com/file/d/1FJrQ_WYZHxLaqtzDl2o7FkvPI5j4p0g_/view?usp=sharing",
     linkedin: "https://www.linkedin.com/in/sumit-panda-50ba2b224/",
     twitter: "https://x.com/Sumit_Panda_?t=YUiDFeiDA9M26WCj4iTMHA&s=09",
     insta: "https://www.instagram.com/sumit_panda?igsh=OGQ5ZDc2ODk2ZA==",
