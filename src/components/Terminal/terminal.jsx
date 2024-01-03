@@ -1,6 +1,9 @@
 import { ReactTerminal } from "react-terminal";
 import "./terminal.css";
 import { useState } from "react";
+import { animateScroll as scroll } from 'react-scroll';
+
+
 function TerminalController(props) {
     const [currentLocation, setCurrentLocation] = useState("#About");
     const [user, setUser] = useState("");
@@ -13,10 +16,10 @@ function TerminalController(props) {
     };
 
     const scrollToElement = (element) => {
-        window.scroll({
-            behavior: "smooth",
-            left: 0,
-            top: element.offsetTop,
+        scroll.scrollTo(element.offsetTop, {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart',
         });
     };
     const echo = (input) => {
