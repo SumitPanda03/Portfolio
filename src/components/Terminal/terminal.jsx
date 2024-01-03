@@ -1,12 +1,42 @@
 import { ReactTerminal } from "react-terminal";
 import "./terminal.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 function TerminalController(props) {
     const [currentLocation, setCurrentLocation] = useState("#About");
     const [user, setUser] = useState("");
     const email = "sbpanda1308@gmail.com";
     const [promptText, setPromptText] = useState("$ Sumit >>");
+    const terminalRef = useRef(null);
+    useEffect(() => {
+        const handleTerminalFocus = (event) => {
+            // Prevent the default behavior to avoid scrolling
+            event.preventDefault();
 
+            // You can add more logic here if needed
+
+            // For example, you might want to set focus back to the input
+            // if that's how your terminal works
+            if (terminalRef.current) {
+                terminalRef.current.focusInput();
+            }
+        };
+        if (terminalRef.current) {
+            terminalRef.current.containerElement.addEventListener(
+                "focus",
+                handleTerminalFocus
+            );
+        }
+
+        // Clean up the event listener on component unmount
+        return () => {
+            if (terminalRef.current) {
+                terminalRef.current.containerElement.removeEventListener(
+                    "focus",
+                    handleTerminalFocus
+                );
+            }
+        };
+    }, []);
     const updateCurrentLocation = () => {
         const path = window.location.hash.slice(1); // Remove the leading "/"
         setCurrentLocation(path || "#");
@@ -100,7 +130,7 @@ function TerminalController(props) {
             navigateTo("#experience");
             return "Navigating to Experience section...";
         },
-        projects:  () => {
+        projects: () => {
             navigateTo("#projects");
             return "Navigating to Projects section...";
         },
@@ -170,6 +200,7 @@ function TerminalController(props) {
             <div className="container">
                 <div className="terminal">
                     <ReactTerminal
+                        ref={terminalRef}
                         commands={commands}
                         themes={{
                             "my-custom-theme": {
