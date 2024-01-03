@@ -1,43 +1,12 @@
 import { ReactTerminal } from "react-terminal";
 import "./terminal.css";
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 function TerminalController(props) {
     const [currentLocation, setCurrentLocation] = useState("#About");
     const [user, setUser] = useState("");
     const email = "sbpanda1308@gmail.com";
     const [promptText, setPromptText] = useState("$ Sumit >>");
-    const terminalRef = useRef(null);
-    useEffect(() => {
-        const handleTerminalFocus = (event) => {
-          event.preventDefault();
-      
-          if (terminalRef.current) {
-            terminalRef.current.focusInput();
-          }
-        };
-      
-        const terminalContainer = terminalRef.current?.containerElement;
-      
-        if (terminalContainer) {
-          // Add the focus event listener
-          terminalContainer.addEventListener('focus', handleTerminalFocus);
-      
-          // Add touchstart event listener to prevent automatic scrolling on touch
-          terminalContainer.addEventListener('touchstart', (event) => {
-            event.preventDefault();
-          });
-        }
-      
-        // Clean up the event listeners on component unmount
-        return () => {
-          if (terminalContainer) {
-            terminalContainer.removeEventListener('focus', handleTerminalFocus);
-            terminalContainer.removeEventListener('touchstart', (event) => {
-              event.preventDefault();
-            });
-          }
-        };
-      }, [terminalRef]);
+
     const updateCurrentLocation = () => {
         const path = window.location.hash.slice(1); // Remove the leading "/"
         setCurrentLocation(path || "#");
@@ -201,7 +170,6 @@ function TerminalController(props) {
             <div className="container">
                 <div className="terminal">
                     <ReactTerminal
-                        ref={terminalRef}
                         commands={commands}
                         themes={{
                             "my-custom-theme": {

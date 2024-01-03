@@ -5,17 +5,20 @@
     /* max-width: 600px; Set your desired maximum width */
     width: auto;
     color: rgba(209, 0, 192, 0.877);
-
+    overflow-y: hidden;
+    position: relative;
 }
 
 .terminal {
+    overflow-y: hidden;
+    position: relative;
+
     width: 1100px;
     height: 600px;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(22, 114, 235, 0.555)
+    box-shadow: 0 0 10px rgba(22, 114, 235, 0.555);
 }
-
 
 /* Add media query for responsiveness */
 @media (max-width: 1104px) {
@@ -34,36 +37,35 @@
 
 @media (max-width: 804px) {
     .terminal {
-        height:400px; /* Adjust height for smaller screens */
+        height: 400px; /* Adjust height for smaller screens */
         width: 700px; /* Adjust height for smaller screens */
     }
 }
 
 @media (max-width: 708px) {
     .terminal {
-        height:400px; /* Adjust height for smaller screens */
+        height: 400px; /* Adjust height for smaller screens */
         width: 650px; /* Adjust height for smaller screens */
     }
 }
 
 @media (max-width: 660px) {
     .terminal {
-        height:400px; /* Adjust height for smaller screens */
+        height: 400px; /* Adjust height for smaller screens */
         width: 550px; /* Adjust height for smaller screens */
     }
 }
 
 @media (max-width: 560px) {
     .terminal {
-        height:400px; /* Adjust height for smaller screens */
+        height: 400px; /* Adjust height for smaller screens */
         width: 400px; /* Adjust height for smaller screens */
     }
 }
 
 @media (max-width: 416px) {
     .terminal {
-        height:400px; /* Adjust height for smaller screens */
+        height: 400px; /* Adjust height for smaller screens */
         width: 300px; /* Adjust height for smaller screens */
     }
 }
-
