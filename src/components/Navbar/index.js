@@ -16,7 +16,7 @@ import { FaBars } from "react-icons/fa";
 import { Bio } from "../../data/constants";
 import { useTheme } from "styled-components";
 import { GiAchievement } from "react-icons/gi";
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -25,7 +25,7 @@ const Navbar = () => {
     const navigate = useNavigate();
     const handleLogoClick = () => {
         // Navigate to the root route '/'
-        navigate('/');
+        navigate("/");
 
         // Scroll to the top of the page
         window.scrollTo(0, 0);
@@ -35,7 +35,8 @@ const Navbar = () => {
         <Nav>
             <NavbarContainer>
                 <NavLogo to="/">
-                    <a href="#"
+                    <a
+                        href="#"
                         style={{
                             display: "flex",
                             alignItems: "center",

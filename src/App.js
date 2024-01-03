@@ -13,6 +13,7 @@ import Experience from "./components/Experience";
 import Education from "./components/Education";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
+import TerminalController from "./components/Terminal/terminal.jsx";
 
 const Body = styled.div`
     background-color: ${({ theme }) => theme.bg};
@@ -34,6 +35,7 @@ const Wrapper = styled.div`
     width: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
+
 function App() {
     const [darkMode] = useState(true);
     const [openModal, setOpenModal] = useState({ state: false, project: null });
@@ -45,6 +47,7 @@ function App() {
                 <Navbar />
                 <Body>
                     <HeroSection />
+                    <TerminalController />
                     <Wrapper>
                         <Skills />
                         <Experience />
