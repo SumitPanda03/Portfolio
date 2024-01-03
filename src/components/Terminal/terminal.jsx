@@ -9,34 +9,35 @@ function TerminalController(props) {
     const terminalRef = useRef(null);
     useEffect(() => {
         const handleTerminalFocus = (event) => {
-            // Prevent the default behavior to avoid scrolling
+          event.preventDefault();
+      
+          if (terminalRef.current) {
+            terminalRef.current.focusInput();
+          }
+        };
+      
+        const terminalContainer = terminalRef.current?.containerElement;
+      
+        if (terminalContainer) {
+          // Add the focus event listener
+          terminalContainer.addEventListener('focus', handleTerminalFocus);
+      
+          // Add touchstart event listener to prevent automatic scrolling on touch
+          terminalContainer.addEventListener('touchstart', (event) => {
             event.preventDefault();
-
-            // You can add more logic here if needed
-
-            // For example, you might want to set focus back to the input
-            // if that's how your terminal works
-            if (terminalRef.current) {
-                terminalRef.current.focusInput();
-            }
-        };
-        if (terminalRef.current) {
-            terminalRef.current.containerElement.addEventListener(
-                "focus",
-                handleTerminalFocus
-            );
+          });
         }
-
-        // Clean up the event listener on component unmount
+      
+        // Clean up the event listeners on component unmount
         return () => {
-            if (terminalRef.current) {
-                terminalRef.current.containerElement.removeEventListener(
-                    "focus",
-                    handleTerminalFocus
-                );
-            }
+          if (terminalContainer) {
+            terminalContainer.removeEventListener('focus', handleTerminalFocus);
+            terminalContainer.removeEventListener('touchstart', (event) => {
+              event.preventDefault();
+            });
+          }
         };
-    }, []);
+      }, [terminalRef]);
     const updateCurrentLocation = () => {
         const path = window.location.hash.slice(1); // Remove the leading "/"
         setCurrentLocation(path || "#");
