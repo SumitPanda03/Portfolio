@@ -347,10 +347,11 @@ export const projects = [
             "Express Js",
             "Redux",
             "NodeMailer",
+            "AWS S3"
         ],
         category: "web app",
         github: "https://github.com/SumitPanda03/MLSA-IIIT-WEBSITE/tree/master",
-        webapp: "https://mlsa-iiit-web.vercel.app/",
+        webapp: "https://mlsa-wheat.vercel.app/",
         member: [
             {
                 name: "Sumit Bhusan Panda",
