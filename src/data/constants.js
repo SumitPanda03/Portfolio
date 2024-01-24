@@ -351,7 +351,7 @@ export const projects = [
         ],
         category: "web app",
         github: "https://github.com/SumitPanda03/MLSA-IIIT-WEBSITE/tree/master",
-        webapp: "https://mlsa-wheat.vercel.app/",
+        webapp: "https://mlsa-iiitbh.vercel.app/",
         member: [
             {
                 name: "Sumit Bhusan Panda",
