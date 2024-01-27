@@ -403,7 +403,7 @@ export const projects = [
         github: "https://github.com/SumitPanda03/Portfolio",
         webapp: "https://portfolio-ten-delta-35.vercel.app/",
     },    {
-        id: 6,
+        id: 11,
         title: "Camp It IIIT",
         date: "September 2023 - September 2023",
         description:
@@ -452,6 +452,18 @@ export const projects = [
         tags: ["Python", "MySQL"],
         category: "web app",
         github: "https://github.com/SumitPanda03/Hospital-Management-System",
+    },
+    {
+        id: 6,
+        title: "TechLink",
+        date: "Jan 2024- Feb 2024",
+        description:
+            "This website is a question forum and made to look like Stack Overflow. It has 3 extra features: Custom Video Player with gesture controls,Dark Mode / Light Mode toggle according to System Time, User Login Credentials (OS, Browser, DeviceType, IP Address) displayed",
+        image: "https://firebasestorage.googleapis.com/v0/b/images-13a9b.appspot.com/o/TechLink.png?alt=media&token=93597cc4-b250-475a-92c5-fad28938199f",
+        tags: ["HTML","CSS","Bootstrap","ReactJS","React-Player","NodeJS","ExpressJS","MongoDB","Dark/Light Mode Toggle","JWT","Redux"],
+        category: "web app",
+        github: "https://github.com/SumitPanda03/Stackoverflow",
+        webapp: "https://stackoverflow-xi.vercel.app/",
     },
 
 ];
