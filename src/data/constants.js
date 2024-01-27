@@ -381,7 +381,7 @@ export const projects = [
         github: "hhttps://github.com/SumitPanda03/Grocery-Store",
     },
     {
-        id: 4,
+        id: 6,
         title: "Todo Web App",
         date: "May 2023 - May 2023",
         description:
@@ -454,7 +454,7 @@ export const projects = [
         github: "https://github.com/SumitPanda03/Hospital-Management-System",
     },
     {
-        id: 6,
+        id: 4,
         title: "TechLink",
         date: "Jan 2024- Feb 2024",
         description:
